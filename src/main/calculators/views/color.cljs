@@ -1,6 +1,5 @@
 (ns calculators.views.color
   (:require [reagent.core :as r]
-            [reagent.ratom :as rv :refer-macros [reaction]]
             [calculators.helpers.color :as co]))
 
 (defn hex-to-rgb-form []
