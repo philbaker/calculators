@@ -13,7 +13,7 @@
           :htmlFor "what-is"} "What is"]
         [:div
          [:input
-          {:class "w-20 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          {:class "w-20 block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
            :value @first
            :on-change #(reset! first (-> % .-target .-value))
            :id "what-is",
@@ -26,7 +26,7 @@
           :htmlFor "percent-of"} "% of"]
         [:div
          [:input
-          {:class "w-20 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          {:class "w-20 block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
            :value @second
            :on-change #(reset! second (-> % .-target .-value))
            :id "percent-of",
@@ -34,7 +34,7 @@
            :placeholder "0",
            :type "number"}]]]
        [:input
-        {:class "ml-6 w-20 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+        {:class "ml-6 w-20 block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
          :value (pe/percentage-as-number 
                   (js/Number @first) 
                   (js/Number @second))
@@ -52,7 +52,7 @@
           :htmlFor "the-number"} "The number"]
         [:div
          [:input
-          {:class "w-20 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          {:class "w-20 block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
            :value @first
            :on-change #(reset! first (-> % .-target .-value))
            :id "the-number",
@@ -65,7 +65,7 @@
           :htmlFor "percent-of"} "is what % of"]
         [:div
          [:input
-          {:class "w-20 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          {:class "w-20 block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
            :value @second
            :on-change #(reset! second (-> % .-target .-value))
            :id "percent-of",
@@ -73,7 +73,7 @@
            :placeholder "0",
            :type "number"}]]]
        [:input
-        {:class "ml-6 w-20 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+        {:class "ml-6 w-20 block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
          :value (pe/number-as-percentage
                   (js/Number @first) 
                   (js/Number @second))
@@ -91,7 +91,7 @@
           :htmlFor "increase-decrease"} "% increase/decrease from"]
         [:div
          [:input
-          {:class "w-20 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          {:class "w-20 block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
            :value @first
            :on-change #(reset! first (-> % .-target .-value))
            :id "increase-decrease",
@@ -104,7 +104,7 @@
           :htmlFor "to"} "to"]
         [:div
          [:input
-          {:class "w-20 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          {:class "w-20 block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
            :value @second
            :on-change #(reset! second (-> % .-target .-value))
            :id "to",
@@ -112,7 +112,7 @@
            :placeholder "0",
            :type "number"}]]]
        [:input
-        {:class "ml-6 w-20 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+        {:class "ml-6 w-20 block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
          :value (pe/percentage-change
                   (js/Number @first) 
                   (js/Number @second))

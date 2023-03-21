@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./src/**/**/*.cljs", "./src/main/calculators/views.cljs"],
+  content: ["./src/**/**/*.cljs"],
   theme: {
     extend: {},
   },
