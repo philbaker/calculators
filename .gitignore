@@ -1,6 +1,7 @@
 node_modules/
-public/js
-public/app.css
+
+/public/js/cljs-runtime
+/docs/js/cljs-runtime
 
 /target
 /checkouts
