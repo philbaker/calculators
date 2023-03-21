@@ -1,9 +1,0 @@
-{:source-paths ["src/dev"
-                "src/main"
-                "src/test"]
- :dependencies [[reagent "1.2.0"]
-                [metosin/reitit "0.6.0"]]
- :dev-http {8080 "public"}
- :builds {:app
-          {:target :browser
-           :modules {:app {:init-fn calculators.core/main}}}}}
