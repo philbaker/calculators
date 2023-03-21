@@ -44,4 +44,4 @@
   (rfe/start!
     (rf/router routes)
     (fn [m] (reset! match m))
-    {:use-fragment false}))
+    {:use-fragment true}))
