@@ -1,6 +1,7 @@
 (ns calculators.helpers.color
   (:require [cljs.reader :as c]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [calculators.helpers.util :refer [round-number]]))
 
 (defn handle-short-hex 
   "Converts a 3 char hex to the equivalent 6 char version"
@@ -36,11 +37,6 @@
     (if (= 1 (count hex))
       (str "0" hex)
       hex)))
-
-(defn round-number 
-  "Rounds a number to two decimal places"
-  [x]
-  (/ (.round js/Math (* 100 x)) 100))
 
 (defn hex-to-decimal
   "Converts hex code to a decimal number"
@@ -112,51 +108,6 @@
     (conj colors (hex-to-decimal (str/join a)))))
 
 (comment
-  (handle-short-hex "#000")
-  ; "#000000"
-
-  (hex-to-rgb "#FFF") 
-  ; [255 255 255]
-
-  (rgb-to-hex (hex-to-rgb "#FFF"))
-  ; "#ffffff"
-
-  (decimal-to-hex 0.5)
-  ; "80"
-
-  (decimal-to-hex 0.05)
-  ; "0d"
-
-  (rgb-to-hex '(255 000 000))
-  ; "#ff0000"
-
-  (rgb-format-css '(255 255 255)) 
-  ; "rgb(255, 255, 255)"
-
-  (rgba-format-css '(255 255 255)) 
-  ; "rgba(255, 255, 255)"
-
   (c/read-string "0xff")
   ; 255
-
-  (hex-to-decimal "ff")
-  ; 1
-
-  (hex-to-decimal "80")
-  ; 0.5
-
-  (hex-to-decimal "0d") 
-  ; 0.05
-
-  (rgba-to-hex8 [255 255 255 0.5])
-  ; "#ffffff80"
-
-  (rgba-format-css (hex8-to-rgba "#ffffff80"))
-  ; "rgba(255, 255, 255, 0.5)"
-
-  (rgb-unformat-css "rgb(255, 255, 255)")
-  ; [255 255 255]
-
-  (rgba-unformat-css "rgba(255, 255, 255, 0.5)")
-  ; [255 255 255 0.5]
   )

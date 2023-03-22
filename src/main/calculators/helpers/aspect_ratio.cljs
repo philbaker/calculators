@@ -52,23 +52,3 @@
     :ratio-height 9
     :pixel-width 1280
     :pixel-height 548.57}])
-
-(comment
-  (decimal-to-fraction (fraction-to-decimal (decimal-to-fraction 0.5))) 
-  ; "1/2"
-
-  (fraction-to-decimal "1/2") 
-  ; 0.5
-
-  (calculate-width 50 2 1) 
-  ; 100
-
-  (calculate-height 100 2 1) 
-  ; 50
-
-  (calculate-ratio-decimal 50 100) 
-  ; 0.5
-
-  (calculate-ratio-fraction 50 100)
-  ; "1/2"
-  )

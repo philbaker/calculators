@@ -1,4 +1,5 @@
-(ns calculators.helpers.loan)
+(ns calculators.helpers.loan
+  (:require [calculators.helpers.util :refer [round-number]]))
 
 (defn monthly-loan-repayment [rate num-payments loan-amount]
   (if (= rate 0)
@@ -6,7 +7,7 @@
     (let [interest-factor (js/Math.pow (+ 1 rate) num-payments)
           payment-amount (* rate (/ (* loan-amount interest-factor) 
                                     (- interest-factor 1)))]
-      payment-amount)))
+      (round-number payment-amount))))
 
 (defn num-payments [years]
   (* years 12))
