@@ -22,8 +22,4 @@
    [:h3 {:class "text-lg mt-6 mx-6"} "Hex to RGB"]
    [:div {:class "space-x-16 bg-gray-50 w-full flex"}
     [co/hex-to-rgb-form]
-    [co/hex8-to-rgba-form]]
-   [:h3.text-lg.mt-6.mx-6 "RGB to Hex"]
-   [:div {:class "space-x-16 bg-gray-50 w-full flex"}
-    [co/rgb-to-hex-form]
-    [co/rgba-to-hex8-form]]])
+    [co/hex8-to-rgba-form]]])
