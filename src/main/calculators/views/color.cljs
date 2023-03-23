@@ -21,7 +21,7 @@
         rgb (r/atom "rgb(0, 0, 0)")]
     (fn []
       [:div {:class "flex items-start"} 
-       [:div
+       [:div {:class "w-full sm:w-auto"}
         [:label
          {:class "block text-sm font-medium leading-6 text-gray-900",
           :htmlFor "hex"} "hex"]
@@ -66,8 +66,8 @@
   (let [hex8 (r/atom "#00000080")
         rgba (r/atom "rgb(0, 0, 0, 0.5)")]
     (fn []
-      [:div {:class "flex items-start"} 
-       [:div
+      [:div {:class "mt-12 sm:mt-0 flex items-start"} 
+       [:div {:class "w-full sm:w-auto"}
         [:label
          {:class "block text-sm font-medium leading-6 text-gray-900",
           :htmlFor "hex8"} "hex8"]

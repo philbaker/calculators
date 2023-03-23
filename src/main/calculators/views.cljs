@@ -18,7 +18,7 @@
 
 (defn color-calculator []
   [:div {:class "mb-14"}
-   [:h2 {:class "text-xl mt-6 mx-6"} "Color"]
+   [:h2 {:class "text-xl mt-6 mx-6"} "Colour"]
    [:div {:class "sm:space-x-16 p-6 mt-6 bg-gray-50 w-full sm:flex"}
     [co/hex-to-rgb-form]
     [co/hex8-to-rgba-form]]])
