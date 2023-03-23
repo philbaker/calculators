@@ -20,10 +20,12 @@
 
 (defn header []
   [:div.px-6
-   [:h1.text-2xl.mt-3 "Calculators"]])
+   [:a 
+    {:class "text-2xl mt-3 block"
+     :href (rfe/href ::pixel)} "Calculators"]])
 
 (defn active-link [route]
-  (when (= (:name (:data @match)) route) "underline"))
+  (when (= (:name (:data @match)) route) "font-bold"))
 
 (defn current-page []
   [:div
