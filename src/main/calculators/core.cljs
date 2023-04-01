@@ -5,7 +5,7 @@
             [helix.core :refer [defnc $]]
             [helix.dom :as d]
             ["react-dom/client" :as rdom]
-            ["react-router-dom" :refer [BrowserRouter Route Routes NavLink]]))
+            ["react-router-dom" :refer [HashRouter Route Routes NavLink]]))
 
 (defnc header []
   (d/h1 {:className "text-2xl mt-6 mb-3"} 
@@ -24,7 +24,7 @@
 
 (defnc app []
   (d/div {:className "px-6"}
-    ($ BrowserRouter
+    ($ HashRouter
        ($ header)
        (d/nav {:className "space-x-4 mt-3 mb-6"}
               ($ NavLink {:to "/" 
